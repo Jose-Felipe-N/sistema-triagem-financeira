@@ -9,15 +9,18 @@ st.set_page_config(page_title="Triagem Financeira", page_icon="💰")
 arquivos_usuarios = "usuarios.json"
 
 def carregar_usuarios():
-    """Carrega os dados dos usuários a partir de um arquivo JSON"""
-    if not os.path.exists("arquivos_usuarios"):
-        dados_iniciais = {"admin": "admin123"}
-        with open("arquivos_usuarios", "w") as f:
-            json.dump(dados_iniciais, f)
-        return dados_iniciais
+    caminho_arquivo = 'usuarios.json'
     
-    with open("arquivos_usuarios", "r") as f:
-        return json.load(f)
+    if not os.path.exists(caminho_arquivo):
+        with open(caminho_arquivo, 'w') as f:
+            json.dump([], f)
+        return []
+
+    try:
+        with open(caminho_arquivo, 'r') as f:
+            return json.load(f)
+    except (json.JSONDecodeError, ValueError):
+        return []
     
 def salvar_usuario(nome, senha):
     """Salva um novo usuairo no arquivo JSON"""
