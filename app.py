@@ -13,14 +13,14 @@ def carregar_usuarios():
     
     if not os.path.exists(caminho_arquivo):
         with open(caminho_arquivo, 'w') as f:
-            json.dump([], f)
-        return []
+            json.dump({}, f)
+        return {}
 
     try:
         with open(caminho_arquivo, 'r') as f:
             return json.load(f)
     except (json.JSONDecodeError, ValueError):
-        return []
+        return {}
     
 def salvar_usuario(nome, senha):
     """Salva um novo usuairo no arquivo JSON"""
@@ -28,7 +28,7 @@ def salvar_usuario(nome, senha):
     if nome in usuarios: # Correção: alterado para verificar se já existe
         return False
     usuarios[nome] = senha
-    with open("arquivos_usuarios", "w") as f:
+    with open(arquivos_usuarios, "w") as f:
         json.dump(usuarios, f, indent=4)
     return True
 
