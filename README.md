@@ -23,6 +23,6 @@ O sistema é dividido em áreas de acesso com controle de permissões:
 
 Clone este repositório:
 ```bash
-git clone [https://github.com/Jose-Felipe-N/sistema-triagem-financeira.git](https://github.com/Jose-Felipe-N/sistema-triagem-financeira.git)
+git clone https://github.com/Jose-Felipe-N/portfolio-jose-felipe.git
 pip install streamlit
 streamlit run app.py
