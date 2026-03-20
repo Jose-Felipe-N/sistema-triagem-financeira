@@ -1,5 +1,7 @@
 # 💰 Sistema de Triagem Financeira | José Felipe
 
+**[Acesse o sistema funcionando ao vivo clicando aqui!](https://sistema-triagem-financeira-ag5uvayg5b4movxwqnvjr.streamlit.app/)**
+
 Bem-vindo ao repositório do meu Sistema de Triagem Financeira! Este projeto foi desenvolvido inteiramente em **Python** utilizando o framework **Streamlit** para criar uma aplicação web interativa que analisa o perfil de investidores e recomenda estratégias financeiras automatizadas.
 
 ## 🎯 Sobre o Projeto
